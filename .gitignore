@@ -15,3 +15,5 @@ tools.jni4net/WcfLoadTest.WcfServiceClientPublic/clr/
 tools.jni4net/WcfLoadTest.WcfServiceClientPublic/jvm/
 WcfLoadTest.WcfService/obj/
 WcfLoadTest.WcfServiceClient/bin/
+tools.jni4net/WcfLoadTest.JMeterAction/
+WcfLoadTest.WcfServiceClientTestApplication/WcfLoadTest.WcfServiceClientTestApplication/obj/

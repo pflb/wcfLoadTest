@@ -1,7 +1,6 @@
-﻿using WcfLoadTest.JMeterAction;
-using JMeter.Data;
+﻿using JMeter.Data;
 using System;
-using System.Collections.Generic;
+using WcfLoadTest.JMeterAction;
 
 namespace WcfLoadTest.JMeterActionTestApplication
 {
