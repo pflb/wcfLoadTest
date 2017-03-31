@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="WcfLoadTest1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../tools.jni4net/WcfLoadTest.WcfServiceClientPublic" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/../tools.jni4net/WcfLoadTest.WcfServiceClientPublic" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../tools.jni4net/WcfLoadTest.WcfServiceClientPublic/jvm" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../tools.jni4net/WcfLoadTest.WcfServiceClientPublic" recursive="false" />
+  </library>
+</component>

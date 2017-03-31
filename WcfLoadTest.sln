@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.WcfService", "WcfLoadTest.WcfService\WcfLoadTest.WcfService.csproj", "{65EE09B2-155A-4522-9585-F3716FC05B74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.WcfServiceClient", "WcfLoadTest.WcfServiceClient\WcfLoadTest.WcfServiceClient.csproj", "{94CA5BAE-7B6A-4DF8-B7C7-F6AC396A53FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.WcfServiceClientPublic", "WcfLoadTest.WcfServiceClientPublic\WcfLoadTest.WcfServiceClientPublic.csproj", "{F106C94E-FFA5-41BE-9003-440F6D7BDA0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.WcfServiceClientTestApplication", "WcfLoadTest.WcfServiceClientTestApplication\WcfLoadTest.WcfServiceClientTestApplication\WcfLoadTest.WcfServiceClientTestApplication.csproj", "{FCE09D1C-1660-460A-A492-56765FC97ED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.JMeterAction", "WcfLoadTest.JMeterAction\WcfLoadTest.JMeterAction.csproj", "{8D0B06D6-E667-40F7-A9DA-95D6579131AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.JMeterActionTestApplication", "WcfLoadTest.JMeterActionTestApplication\WcfLoadTest.JMeterActionTestApplication.csproj", "{63CE3837-EA1C-4572-85DF-F340B029D79C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMeter.Data", "JMeter.Data\JMeter.Data.csproj", "{B75468BC-27ED-46A6-B472-0991579567BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65EE09B2-155A-4522-9585-F3716FC05B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65EE09B2-155A-4522-9585-F3716FC05B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65EE09B2-155A-4522-9585-F3716FC05B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65EE09B2-155A-4522-9585-F3716FC05B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94CA5BAE-7B6A-4DF8-B7C7-F6AC396A53FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94CA5BAE-7B6A-4DF8-B7C7-F6AC396A53FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94CA5BAE-7B6A-4DF8-B7C7-F6AC396A53FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94CA5BAE-7B6A-4DF8-B7C7-F6AC396A53FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F106C94E-FFA5-41BE-9003-440F6D7BDA0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F106C94E-FFA5-41BE-9003-440F6D7BDA0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F106C94E-FFA5-41BE-9003-440F6D7BDA0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F106C94E-FFA5-41BE-9003-440F6D7BDA0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE09D1C-1660-460A-A492-56765FC97ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE09D1C-1660-460A-A492-56765FC97ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE09D1C-1660-460A-A492-56765FC97ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE09D1C-1660-460A-A492-56765FC97ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D0B06D6-E667-40F7-A9DA-95D6579131AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D0B06D6-E667-40F7-A9DA-95D6579131AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D0B06D6-E667-40F7-A9DA-95D6579131AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D0B06D6-E667-40F7-A9DA-95D6579131AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CE3837-EA1C-4572-85DF-F340B029D79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CE3837-EA1C-4572-85DF-F340B029D79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CE3837-EA1C-4572-85DF-F340B029D79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CE3837-EA1C-4572-85DF-F340B029D79C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75468BC-27ED-46A6-B472-0991579567BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75468BC-27ED-46A6-B472-0991579567BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75468BC-27ED-46A6-B472-0991579567BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75468BC-27ED-46A6-B472-0991579567BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

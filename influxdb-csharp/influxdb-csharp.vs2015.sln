@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{72DC28B9-37B5-425C-8532-5CA91D253A70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "global", "global", "{35451F76-443F-442E-BE7E-23020DA3F0C5}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		Build.ps1 = Build.ps1
+		global.json = global.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfluxDB.LineProtocol", "src\InfluxDB.LineProtocol\InfluxDB.LineProtocol.csproj", "{4065F6EE-CB2D-4B3A-A32E-CA6FBD7FD679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfluxDB.LineProtocol.Tests", "test\InfluxDB.LineProtocol.Tests\InfluxDB.LineProtocol.Tests.csproj", "{34173CA2-1551-4E46-B8E7-E4629A48E415}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "sample\Sample\Sample.csproj", "{DC6028D6-ED1D-4857-B5EB-28BA05E3F531}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{75C71D21-E6FD-493F-A355-997EEF4DDF11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{CD65EE64-FDA8-4ED9-A7F2-81BDD9F64C64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asset", "asset", "{1B61D83B-C102-4079-981A-8FAF695D62CF}"
+	ProjectSection(SolutionItems) = preProject
+		asset\influxdata.jpg = asset\influxdata.jpg
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfluxDB.Collector", "src\InfluxDB.Collector\InfluxDB.Collector.csproj", "{CC276139-18D1-47C9-8173-0D39905AE372}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4065F6EE-CB2D-4B3A-A32E-CA6FBD7FD679} = {4065F6EE-CB2D-4B3A-A32E-CA6FBD7FD679}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4065F6EE-CB2D-4B3A-A32E-CA6FBD7FD679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4065F6EE-CB2D-4B3A-A32E-CA6FBD7FD679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4065F6EE-CB2D-4B3A-A32E-CA6FBD7FD679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4065F6EE-CB2D-4B3A-A32E-CA6FBD7FD679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34173CA2-1551-4E46-B8E7-E4629A48E415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34173CA2-1551-4E46-B8E7-E4629A48E415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34173CA2-1551-4E46-B8E7-E4629A48E415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34173CA2-1551-4E46-B8E7-E4629A48E415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC6028D6-ED1D-4857-B5EB-28BA05E3F531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC6028D6-ED1D-4857-B5EB-28BA05E3F531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC6028D6-ED1D-4857-B5EB-28BA05E3F531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC6028D6-ED1D-4857-B5EB-28BA05E3F531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC276139-18D1-47C9-8173-0D39905AE372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC276139-18D1-47C9-8173-0D39905AE372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC276139-18D1-47C9-8173-0D39905AE372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC276139-18D1-47C9-8173-0D39905AE372}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4065F6EE-CB2D-4B3A-A32E-CA6FBD7FD679} = {72DC28B9-37B5-425C-8532-5CA91D253A70}
+		{34173CA2-1551-4E46-B8E7-E4629A48E415} = {75C71D21-E6FD-493F-A355-997EEF4DDF11}
+		{DC6028D6-ED1D-4857-B5EB-28BA05E3F531} = {CD65EE64-FDA8-4ED9-A7F2-81BDD9F64C64}
+		{CC276139-18D1-47C9-8173-0D39905AE372} = {72DC28B9-37B5-425C-8532-5CA91D253A70}
+	EndGlobalSection
+EndGlobal

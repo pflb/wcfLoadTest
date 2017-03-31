@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f506e027-cefe-483f-bf7b-b4df1554f2ae" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://wcfserviceforloadtest/ServiceBasicHttp.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceBasicHttp.wsdl" MetadataType="Wsdl" ID="6f559ada-58c3-41de-8dc0-63d6396df247" SourceId="1" SourceUrl="http://wcfserviceforloadtest/ServiceBasicHttp.svc?wsdl" />
+    <MetadataFile FileName="ServiceBasicHttp.disco" MetadataType="Disco" ID="09c86204-f5d4-4fa7-ba40-804617e507ec" SourceId="1" SourceUrl="http://wcfserviceforloadtest/ServiceBasicHttp.svc?disco" />
+    <MetadataFile FileName="ServiceBasicHttp.xsd" MetadataType="Schema" ID="40be1b3d-f3a6-43f0-a38a-631ef3c71abf" SourceId="1" SourceUrl="http://wcfserviceforloadtest/ServiceBasicHttp.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceBasicHttp1.xsd" MetadataType="Schema" ID="3eade9b0-1219-4861-825a-8dd6c3cb6748" SourceId="1" SourceUrl="http://wcfserviceforloadtest/ServiceBasicHttp.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceBasicHttp2.xsd" MetadataType="Schema" ID="ae214f5f-63a9-4aa8-934f-23f51d4344cb" SourceId="1" SourceUrl="http://wcfserviceforloadtest/ServiceBasicHttp.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceBasicHttp3.xsd" MetadataType="Schema" ID="539e80c9-b4bc-4ee0-94c8-768f39b304a0" SourceId="1" SourceUrl="http://wcfserviceforloadtest/ServiceBasicHttp.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

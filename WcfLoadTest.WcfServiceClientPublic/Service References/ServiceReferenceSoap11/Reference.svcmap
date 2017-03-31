@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c57ebfbb-7f9e-470e-b65c-9e988fafeca6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://wcfserviceforloadtest/ServiceSoap11.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceSoap11.disco" MetadataType="Disco" ID="63a15cbb-706e-4bbc-b857-029079aad854" SourceId="1" SourceUrl="https://wcfserviceforloadtest/ServiceSoap11.svc?disco" />
+    <MetadataFile FileName="ServiceSoap11.xsd" MetadataType="Schema" ID="652c28ae-157d-4417-9514-bb9f6f00ac31" SourceId="1" SourceUrl="https://wcfserviceforloadtest/ServiceSoap11.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceSoap11.wsdl" MetadataType="Wsdl" ID="60f291a7-01b2-4979-8641-2f739fb0f899" SourceId="1" SourceUrl="https://wcfserviceforloadtest/ServiceSoap11.svc?wsdl" />
+    <MetadataFile FileName="ServiceSoap111.xsd" MetadataType="Schema" ID="d6629523-4a1e-40c7-b869-5f9b52dacb10" SourceId="1" SourceUrl="https://wcfserviceforloadtest/ServiceSoap11.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceSoap112.xsd" MetadataType="Schema" ID="cc1205e5-686f-4443-aab5-cea09d80e488" SourceId="1" SourceUrl="https://wcfserviceforloadtest/ServiceSoap11.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceSoap113.xsd" MetadataType="Schema" ID="c8019b2b-896a-4a7e-bbb3-d34b6731f7aa" SourceId="1" SourceUrl="https://wcfserviceforloadtest/ServiceSoap11.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

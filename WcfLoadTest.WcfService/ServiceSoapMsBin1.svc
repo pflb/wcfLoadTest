@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfLoadTest.WcfService.ServiceSoapMsBin1" CodeBehind="ServiceSoapMsBin1.svc.cs" %>

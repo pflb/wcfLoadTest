@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceNetTcp" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IServiceNetTcp_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000">
+          </wsrm:InactivityTimeout>
+          <wsrm:AcknowledgementInterval Milliseconds="200">
+          </wsrm:AcknowledgementInterval>
+        </wsrm:RMAssertion>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256>
+                </sp:Basic256>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict>
+                </sp:Strict>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceNetTcp_Init_InputMessage">
+    <wsdl:part name="parameters" element="tns:Init" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNetTcp_Init_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNetTcp_LoadFileAndReturnFileSizeInBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadFileAndReturnFileSizeInBytes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNetTcp_LoadFileAndReturnFileSizeInBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadFileAndReturnFileSizeInBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNetTcp_GetFileBySize_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileBySize" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNetTcp_GetFileBySize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileBySizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNetTcp_GetFileSizes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileSizes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNetTcp_GetFileSizes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileSizesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNetTcp_GetIntValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntValue" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNetTcp_GetIntValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntValueResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceNetTcp">
+    <wsdl:operation name="Init">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNetTcp/Init" message="tns:IServiceNetTcp_Init_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNetTcp/InitResponse" message="tns:IServiceNetTcp_Init_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFileAndReturnFileSizeInBytes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNetTcp/LoadFileAndReturnFileSizeInBytes" message="tns:IServiceNetTcp_LoadFileAndReturnFileSizeInBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNetTcp/LoadFileAndReturnFileSizeInBytesResponse" message="tns:IServiceNetTcp_LoadFileAndReturnFileSizeInBytes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileBySize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNetTcp/GetFileBySize" message="tns:IServiceNetTcp_GetFileBySize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNetTcp/GetFileBySizeResponse" message="tns:IServiceNetTcp_GetFileBySize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSizes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNetTcp/GetFileSizes" message="tns:IServiceNetTcp_GetFileSizes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNetTcp/GetFileSizesResponse" message="tns:IServiceNetTcp_GetFileSizes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNetTcp/GetIntValue" message="tns:IServiceNetTcp_GetIntValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNetTcp/GetIntValueResponse" message="tns:IServiceNetTcp_GetIntValue_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IServiceNetTcp" type="tns:IServiceNetTcp">
+    <wsp:PolicyReference URI="#NetTcpBinding_IServiceNetTcp_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Init">
+      <soap12:operation soapAction="http://tempuri.org/IServiceNetTcp/Init" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFileAndReturnFileSizeInBytes">
+      <soap12:operation soapAction="http://tempuri.org/IServiceNetTcp/LoadFileAndReturnFileSizeInBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileBySize">
+      <soap12:operation soapAction="http://tempuri.org/IServiceNetTcp/GetFileBySize" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSizes">
+      <soap12:operation soapAction="http://tempuri.org/IServiceNetTcp/GetFileSizes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntValue">
+      <soap12:operation soapAction="http://tempuri.org/IServiceNetTcp/GetIntValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceNetTcp">
+    <wsdl:port name="NetTcpBinding_IServiceNetTcp" binding="tns:NetTcpBinding_IServiceNetTcp">
+      <soap12:address location="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/WcfServiceForLoadTest</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
