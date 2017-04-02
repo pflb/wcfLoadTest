@@ -18,14 +18,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="3abddead-f0cd-408c-9ff4-69c1256e41aa" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="545abe78-ef95-49cb-9fba-bf43a8aab078" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex/mex" />
-    <MetadataFile FileName="Message1.xsd" MetadataType="Schema" ID="62dc6e1a-007a-4660-898b-04f7d98bdfcf" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex/mex" />
-    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="e89a0d13-2a78-4d81-bcb3-163e0259e761" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex/mex" />
-    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="f48725b1-8839-4329-b5fb-f168d625280c" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f724786d-0318-4946-9e57-90d578b507f7" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="70748e2c-3e37-49b5-aea2-22c8e98dac92" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="8a1058dd-449e-4433-b182-c18505ef6f17" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7335388e-0fea-4f73-9c1d-256905d6ce83" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="61df539b-597a-4867-b04f-abe516fb6a5b" SourceId="1" SourceUrl="net.tcp://wcfserviceforloadtest/ServiceNetTcp.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
