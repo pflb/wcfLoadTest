@@ -41,6 +41,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System.configuration" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System" />
     <Reference Include="System.Web" />
@@ -58,6 +59,7 @@
     <Compile Include="IServiceSoap11.cs" />
     <Compile Include="IServiceSoapMsBin1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service.cs" />
     <Compile Include="ServiceBasicHttp.svc.cs">
       <DependentUpon>ServiceBasicHttp.svc</DependentUpon>
     </Compile>

@@ -8,82 +8,36 @@ namespace WcfLoadTest.WcfService
     // ПРИМЕЧАНИЕ. Чтобы запустить клиент проверки WCF для тестирования службы, выберите элементы ServiceSoap11.svc или ServiceSoap11.svc.cs в обозревателе решений и начните отладку.
     public class ServiceSoap11 : IServiceSoap11
     {
-        string getFilePath(int fileSize)
+        Service service;
+
+        public ServiceSoap11()
         {
-            string fileName = "file_" + fileSize.ToString() + ".bin";
-            string path = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data", fileName);
-            return path;
+            service = new Service();
         }
 
         public void Init()
         {
-            int[] fileSizes = GetFileSizes();
-
-            foreach (int fileSize in fileSizes)
-            {
-                string fileName = getFilePath(fileSize);
-
-                if (!File.Exists(fileName))
-                {
-                    FileStream file = new FileStream(fileName, FileMode.Create);
-                    long mbyte = Convert.ToInt64(fileSize) * 1024 * 1024;
-                    long count = 0;
-                    for (count = 0; count < mbyte; count++)
-                    {
-                        file.WriteByte(1);
-                        if (count % (10 * 1024 * 1024) == 0)
-                            file.Flush();
-                    }
-                    file.Close();
-                }
-
-            }
+            service.Init();
         }
 
         public int[] GetFileSizes()
         {
-            int[] fileSizes;
-            fileSizes = new int[5];
-            fileSizes[0] = 1;
-            fileSizes[1] = 2;
-            fileSizes[2] = 10;
-            fileSizes[3] = 20;
-            fileSizes[4] = 50;
-
-            return fileSizes;
+            return service.GetFileSizes();
         }
 
         public Stream GetFileBySize(int fileSize)
         {
-            string fileName = getFilePath(fileSize);
-            if (!File.Exists(fileName))
-            {
-                throw new FileNotFoundException(String.Format("Файл размером \"{0}\" мега байт недоступен", fileSize));
-            }
-            FileStream file = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
-            return file;
+            return service.GetFileBySize(fileSize);
         }
 
         public Int64 LoadFileAndReturnFileSizeInBytes(Stream file)
         {
-            int readSize = 0;
-            Int64 totalReadSize = 0;
-            int readBufferSize = 1000;
-            byte[] readBuffer = new byte[readBufferSize];
-            do
-            {
-                readSize = file.Read(readBuffer, 0, readBufferSize);
-                totalReadSize += Convert.ToInt64(readSize);
-            }
-            while (readSize > 0);
-            file.Close();
-
-            return totalReadSize;
+            return service.LoadFileAndReturnFileSizeInBytes(file);
         }
 
         public int GetIntValue(int value)
         {
-            return value;
+            return service.GetIntValue(value);
         }
     }
 }
