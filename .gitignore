@@ -18,3 +18,5 @@ tools.jni4net/WcfLoadTest.WcfServiceClient/
 tools.jni4net/WcfLoadTest.WcfServiceClientPublic/
 WcfLoadTest.WcfServiceClientTestApplication/bin/
 WcfLoadTest.WcfServiceClientTestApplication/obj/
+*.user
+.vs/

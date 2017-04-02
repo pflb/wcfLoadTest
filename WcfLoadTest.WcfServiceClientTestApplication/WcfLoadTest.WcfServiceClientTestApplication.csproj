@@ -43,7 +43,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\WcfLoadTest.WcfServiceClient\WcfLoadTest.WcfServiceClient.csproj">
+    <ProjectReference Include="..\WcfLoadTest.WcfServiceClient\WcfLoadTest.WcfServiceClient.csproj">
       <Project>{94ca5bae-7b6a-4df8-b7c7-f6ac396a53fa}</Project>
       <Name>WcfLoadTest.WcfServiceClient</Name>
     </ProjectReference>

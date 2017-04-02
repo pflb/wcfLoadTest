@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.WcfServiceClien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.WcfServiceClientPublic", "WcfLoadTest.WcfServiceClientPublic\WcfLoadTest.WcfServiceClientPublic.csproj", "{F106C94E-FFA5-41BE-9003-440F6D7BDA0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.WcfServiceClientTestApplication", "WcfLoadTest.WcfServiceClientTestApplication\WcfLoadTest.WcfServiceClientTestApplication\WcfLoadTest.WcfServiceClientTestApplication.csproj", "{FCE09D1C-1660-460A-A492-56765FC97ED4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.WcfServiceClientTestApplication", "WcfLoadTest.WcfServiceClientTestApplication\WcfLoadTest.WcfServiceClientTestApplication.csproj", "{FCE09D1C-1660-460A-A492-56765FC97ED4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoadTest.JMeterAction", "WcfLoadTest.JMeterAction\WcfLoadTest.JMeterAction.csproj", "{8D0B06D6-E667-40F7-A9DA-95D6579131AD}"
 EndProject
