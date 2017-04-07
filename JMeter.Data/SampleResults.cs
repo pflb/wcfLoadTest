@@ -40,6 +40,22 @@ namespace JMeter.Data
             sampleResultList = new List<SampleResult>();
         }
 
+        string ExceptionToString(Exception ex)
+        {
+            string result = "";
+            if(ex != null)
+            {
+                result = ex.Message;
+                result += "\n" + ex.StackTrace;
+
+                if(ex.InnerException != null)
+                {
+                    result += "\n\n";
+                    result += ExceptionToString(ex.InnerException);
+                }
+            }
+            return result;
+        }
         public SampleResult Start(string label)
         {
             var sampleResult = new SampleResult(label);
@@ -106,13 +122,14 @@ namespace JMeter.Data
             WatchResults.Remove(label);
 
             dicItem.Stopwatch.Stop();
-            dicItem.SampleResult.End(false, "500", e.Message + "\n" + e.StackTrace, dicItem.Stopwatch.ElapsedMilliseconds);
+            string errorMessage = ExceptionToString(e);
+            dicItem.SampleResult.End(false, "500", errorMessage, dicItem.Stopwatch.ElapsedMilliseconds);
 
             foreach (string key in WatchResults.Keys)
             {
                 DictionaryItem watchResult = WatchResults[key];
                 watchResult.Stopwatch.Stop();
-                watchResult.SampleResult.End(false, "400", e.Message + "\n" + e.StackTrace, watchResult.Stopwatch.ElapsedMilliseconds);
+                watchResult.SampleResult.End(false, "400", errorMessage, watchResult.Stopwatch.ElapsedMilliseconds);
             }
             WatchResults.Clear();
             this.isSuccess = false;
