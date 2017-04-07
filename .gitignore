@@ -20,3 +20,4 @@ WcfLoadTest.WcfServiceClientTestApplication/bin/
 WcfLoadTest.WcfServiceClientTestApplication/obj/
 *.user
 .vs/
+*.bak
