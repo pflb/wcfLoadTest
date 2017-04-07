@@ -69,6 +69,27 @@ namespace WcfLoadTest.JMeterAction
             lr.End();
             #endregion GetFiles
 
+            #region GetFiles and LoadFiles
+            lr.Start($"{clientName}.GetFileBySize(...) x { fileSizes.Length } x {N}");
+            for (int i = 0; i < N; i++)
+            {
+                foreach (var fileSize in fileSizes)
+                {
+                    lr.Start($"{clientName}.GetFileBySize({fileSize}) & {clientName}.LoadFileAndReturnFileSizeInBytes({fileSize} bytes file)");
+                    var client = new T();
+                    lr.Start($"{clientName}.GetFileBySize({fileSize})");
+                    var file = client.GetFileBySize(fileSize);
+                    lr.End();
+                    lr.Start($"{clientName}.LoadFileAndReturnFileSizeInBytes({fileSize} bytes file)");
+                    var uploadFileSize = client.LoadFileAndReturnFileSizeInBytes(file);
+                    lr.End();
+                    client.Close();
+                    lr.End();
+                }
+            }
+            lr.End();
+            #endregion GetFiles and LoadFiles
+
             lr.End();
         }
 
