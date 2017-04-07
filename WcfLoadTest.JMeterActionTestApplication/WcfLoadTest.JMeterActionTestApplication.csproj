@@ -37,7 +37,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JMeter.Data\JMeter.Data.csproj">
@@ -47,6 +49,10 @@
     <ProjectReference Include="..\WcfLoadTest.JMeterAction\WcfLoadTest.JMeterAction.csproj">
       <Project>{8d0b06d6-e667-40f7-a9da-95d6579131ad}</Project>
       <Name>WcfLoadTest.JMeterAction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WcfLoadTest.WcfServiceClient\WcfLoadTest.WcfServiceClient.csproj">
+      <Project>{94ca5bae-7b6a-4df8-b7c7-f6ac396a53fa}</Project>
+      <Name>WcfLoadTest.WcfServiceClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
